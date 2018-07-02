@@ -1,0 +1,418 @@
+@import url('reset.css')
+
+@import url('font.css')
+
+*
+	margin: 0
+	padding: 0
+
+body
+	background-color: #fff
+
+.notification
+	width: 100%
+	height: 40px
+
+	background-color: #000
+	box-shadow: 0 2px rgba(255,255,255,0.2)
+
+	position: relative
+	z-index: 100
+
+	.container-fluid
+		font: 13px Segoe UI Semibold
+		color: #ffe000
+		Line-height: 40px
+
+		.close
+			float: right
+			&:link, &:visited
+				color: #ffe000
+				text-decoration: none
+			&:hover, &:active
+				color: #ffe000
+				text-decoration: underline
+
+.container-fluid
+	width: 980px
+	margin: 0 auto
+	position: relative
+	z-index: 1
+
+.cf
+	clear: both
+	display: table
+
+.button
+	vertical-align: middle
+	&.green
+		background-image: -webkit-linear-gradient(top, rgba(99, 199, 87, 0.9), #63C757)
+		background-image: -moz-linear-gradient(top, rgba(99, 199, 87, 0.9), #63C757)
+		background-image: linear-gradient(to bottom, rgba(99, 199, 87, 0.9), #63C757)
+		width: auto
+		height: 52px
+		border: none
+		outline: none
+		border-radius: 100px
+		box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.2)
+		padding: 0 40px
+		font: 15px "Segoe UI Semibold"
+		color: #fff
+		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3)
+		position: relative
+		&:before
+			content: ''
+			background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.2), rgb(255, 255, 255))
+			background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.2), rgb(255, 255, 255))
+			background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgb(255, 255, 255))
+			width: 96%
+			height: 22px
+			border-radius: 100px 100px 0 0
+			position: absolute
+			top: 4px
+			left: 50%
+			-webkit-transform: translateX(-50%)
+			-ms-transform: translateX(-50%)
+			-o-transform: translateX(-50%)
+			transform: translateX(-50%)
+			opacity: 0.16
+			z-index: 0
+	&.default
+		background-color: #fff
+		width: auto
+		height: 44px
+		border: none
+		outline: none
+		border-radius: 100px
+		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2)
+		padding: 0 20px
+		font: 14px "Segoe UI Semibold"
+		color: #888888
+		position: relative
+	&.outline
+		background: transparent
+		background-color: transparent
+		width: auto
+		height: 44px
+		border: none
+		outline: none
+		border-radius: 100px
+		border: 2px solid #fff
+		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2)
+		padding: 0 20px
+		font: 14px "Segoe UI Semibold"
+		color: #fff
+		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4)
+		position: relative
+
+header#header
+	background-color: #3BB2D0
+	width: 100%
+	height: 460px
+	position: relative
+	&:before
+		content: ''
+		background-image: url('../img/hotel-view.png')
+		background-repeat: no-repeat
+		background-position: 0 0
+		width: 100%
+		height: 460px
+		position: absolute
+		top: 0
+		left: 0
+	&:after
+		content: ''
+		background-color: rgba(0, 0, 0, 0.06)
+		width: 100%
+		height: 1px
+		position: absolute
+		top: 94px
+		left: 0
+		z-index: 0
+	.logo
+		margin-top: 30px
+		float: left
+	.users-online
+		margin-top: 30px
+		font: 14px "Segoe UI Semibold"
+		color: #fff
+		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 4px 6px rgba(0, 0, 0, 0.1)
+		float: right
+		a
+			font-family: "Segoe UI Semibold"
+			font-weight: normal
+			font-size: 17px
+			vertical-align: bottom
+		img
+			background-image: url('../img/icon-hotel-online.png')
+			width: 19px
+			height: 25px
+			cursor: pointer
+			margin: -7px 5px 0 0
+			vertical-align: middle !important
+	.search
+		background-color: #3091AA
+		width: 220px
+		height: 44px
+		border-radius: 4px
+		box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.4)
+		position: absolute
+		top: 71px
+		right: 0
+		input
+			&[type="text"]
+				background: none
+				width: 176px
+				height: 44px
+				border: none
+				-webkit-box-sizing: border-box
+				-moz-box-sizing: border-box
+				box-sizing: border-box
+				outline: none
+				font: 14px "Segoe UI Semibold"
+				color: #89D1E3
+				text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3)
+				padding: 0 10px
+				float: left
+				&::-webkit-input-placeholder
+					color: #89D1E3
+			&[type="submit"]
+				background-image: url('../img/icon-search.png')
+				background-color: #1D758F
+				background-repeat: no-repeat
+				background-position: center
+				width: 44px
+				height: 44px
+				border: none
+				border-radius: 0 6px 6px 0
+				outline: none
+				float: right
+	.introduction
+		margin-top: 30px
+		float: left
+		h1
+			font: 26px "Segoe UI Semibold"
+			color: #fff
+			text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 4px 10px rgba(0, 0, 0, 0.1)
+		p
+			width: 359px
+			font: 14px "Segoe UI Regular"
+			color: #fff
+			text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3)
+			word-wrap: break-word
+		.button
+			margin-top: 30px
+	.auth
+		margin-top: 30px
+		float: right
+		>
+			h1
+				font: 26px "Segoe UI Semibold"
+				color: #fff
+				text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 4px 10px rgba(0, 0, 0, 0.1)
+			label
+				position: relative
+				&[for="username"]
+					margin-right: 14px
+					float: left
+				&[for="password"]
+					float: right
+				> .ribbon
+					background-color: #EEE
+					width: 46px
+					height: 50px
+					border-radius: 4px 0 0 4px
+					position: absolute
+					left: 0px
+					&:before
+						content: ''
+						border: 5px solid transparent
+						border-left-color: #EEE
+						position: absolute
+						top: 50%
+						right: -10px
+						-webkit-transform: translateY(-50%)
+						-ms-transform: translateY(-50%)
+						-o-transform: translateY(-50%)
+						transform: translateY(-50%)
+					&.focus
+						background-color: #CEECF3
+						&:before
+							border-left-color: #CEECF3
+				&[for="username"] > .ribbon
+					&:after
+						content: ''
+						background-image: url('../img/icon-ribbon-user.png')
+						background-position: -1px
+						width: 12px
+						height: 14px
+						position: absolute
+						top: 50%
+						left: 50%
+						-webkit-transform: translate(-50%, -50%)
+						-ms-transform: translate(-50%, -50%)
+						-o-transform: translate(-50%, -50%)
+						transform: translate(-50%, -50%)
+					&.focus:after
+						background-position: -15px 0
+				&[for="password"] > .ribbon
+					&:after
+						content: ''
+						background-image: url('../img/icon-ribbon-pass.png')
+						width: 14px
+						height: 16px
+						position: absolute
+						top: 50%
+						left: 50%
+						-webkit-transform: translate(-50%, -50%)
+						-ms-transform: translate(-50%, -50%)
+						-o-transform: translate(-50%, -50%)
+						transform: translate(-50%, -50%)
+					&.focus:after
+						background-position: -14px 0
+				> input:not([type="checkbox"]):not([type="submit"])
+					width: 180px
+					height: 50px
+					border: none
+					border-radius: 4px
+					-webkit-box-sizing: border-box
+					-moz-box-sizing: border-box
+					box-sizing: border-box
+					box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2)
+					font: 14px "Segoe UI Semibold"
+					color: #878787
+					padding: 0 15px 0 63px
+					outline: none
+					&:focus
+						color: #3BB2D0
+					&::-webkit-input-placeholder
+						color: #878787
+					&:focus::-webkit-input-placeholder
+						color: #3BB2D0
+				&[for="remember"]
+					margin-top: 26px
+					display: inline-block
+					> .checkbox
+						width: 12px
+						height: 12px
+						background-color: #fff
+						border-radius: 1px
+						box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2)
+						position: relative
+						vertical-align: middle
+						margin: 0 5px 1px 0
+						display: inline-block
+
+input[type="checkbox"]:checked ~ .checkbox-item
+	background-image: url('../img/icon-checked.png')
+	width: 12px
+	height: 8px
+	position: absolute
+	top: 50%
+	left: 50%
+	-webkit-transform: translate(-50%, -50%)
+	-ms-transform: translate(-50%, -50%)
+	-o-transform: translate(-50%, -50%)
+	transform: translate(-50%, -50%)
+
+header#header .auth > label
+	&[for="remember"] >
+		.checkbox > input
+			opacity: 0
+		span
+			font: 14px "Segoe UI Semibold"
+			color: #fff
+			text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4)
+			cursor: pointer
+			display: inline-block
+	&[for="forgot"]
+		margin: 10px 0 0 -2px
+		float: left
+		> a
+			font: 14px "Segoe UI Regular"
+			color: #fff
+			text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4)
+			&:link, &:visited
+				text-decoration: none
+	&[for="submit"]
+		margin-top: -14px
+		float: right
+
+main.container-fluid
+	display: table
+
+	ul.article
+		width: 100%
+		margin: -61px 0 0 0
+		list-style: none
+		> li
+			width: 320px
+			height: 200px
+			border-radius: 4px
+			margin: 0  10px 10px 0
+			position: relative
+			float: left
+			&:nth-child(3n)
+				margin-right: 0
+			&.ads >
+				h4
+					font: 14px "Segoe UI Semibold"
+					color: #871F06
+					text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1)
+					padding: 17px 20px 0 20px
+				h1
+					width: 215px
+					font: 20px "Segoe UI Semibold"
+					color: #fff
+					text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3)
+					padding: 0 20px
+			&:not(.ads) >
+				h1
+					width: 215px
+					font: 20px "Segoe UI Semibold"
+					color: #fff
+					text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3)
+					padding: 0 20px 0 20px
+				h4
+					font: 14px "Segoe UI Regular"
+					color: #fff
+					text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2)
+					padding: 0 20px
+					word-wrap: break-word
+					> a
+						font: 15px "Segoe UI Semibold"
+						color: #fff
+						text-decoration: none
+						padding-top: 5px
+						display: inline-block
+						&:link, &:visited
+							font: 15px "Segoe UI Semibold"
+							color: #fff
+							text-decoration: none
+							padding-top: 5px
+							display: inline-block
+			> button
+				position: absolute
+				left: 20px
+				bottom: 20px
+				> i.icon-link
+					background-image: url('../img/icon-link.png')
+					width: 28px
+					height: 28px
+					vertical-align: middle
+					margin: -3px -14px -6px 5px
+					float: right
+
+footer.footer
+	width: 100%
+	margin: 50px 0 42px 0
+	font: 14px "Segoe UI Regular"
+	color: #878787
+
+	span:nth-child(2)
+		float: right
+	a
+		&:link, &:visited
+			font-family: "Segoe UI Semibold"
+			color: #878787
+			text-decoration: none
